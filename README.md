@@ -1,268 +1,70 @@
-# Frontend with React
+# Getting Started with Create React App
 
-## React Podstawy
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1. Zapoznaj się z przykładem [react](react/), zauważ, że można korzystać z reakta i eksperymentować z poziomu strony internetowej;
+## Available Scripts
 
-2. Przejdź przez tutorial 1 dostępny na [react.dev](https://react.dev/learn), bez hooków.
+In the project directory, you can run:
 
-## React App 1
+### `npm start`
 
-Ćwiczenie jest w oparciu o getting-started-with-react tutorial na [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started).
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-1. Utwórz repozytorium na githubie - `pai_4_react`:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-   ```bash
-   # tak jak zawsze zaczynamy
-   # prace w tym samym katalogu
-   cd ~/workspace
-   git clone https://... /pai_4_react.git
-   ```
+### `npm test`
 
-2. Skorzystajmy z generatora, dla utworzenia aplikacji react:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-   ```bash
-   npx create-react-app .
-   ```
+### `npm run build`
 
-3. Przejrzyjmy się wygenerowanej strukturze plików wraz z prowadzącym zajęcia.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-4. Teraz przejdźmy przez strukturę następujących plików:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-   ```mermaid
-   flowchart LR
-    App(src/App.js) --> Ijs(src/index.js) --> Ihtml(public/index.html)
-   ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-   - `src/App.js` - App component;
-   - `src/index.js` - index.
+### `npm run eject`
 
-5. Przygotuj swoje środowisko do pracy:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-   1. code z terminalem ([doc](https://code.visualstudio.com/docs/terminal/basics));
-   2. W terminalu uruchom aplikacje: `npm start`;
-   3. Przeglądarkę na `localhost:3000`.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-6. W `src/App.js` usuń wszystko poniżej elementu `img` w obrębie `header`. Dodaj paragraph z tekstem <i>Hello, Natalio!</i>.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-   ```jsx
-   function App() {
-      const subject = "React";
-      return (
-        <div className="App">
-           <header className="App-header">
-           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hello, Natalio!</p>
-        </header>
-       </div>
-     );
-   }
-   ```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### Zmienne (Variables) w JSX
+## Learn More
 
-7. Teraz skorzystajmy ze zmiennej do zdefiniowania kogo będziemy witać:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-   ```jsx
-   function App() {
-      const subject = "Natalia";
-      return (
-        <div className="App">
-           <header className="App-header">
-           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hello, {subject}!</p>
-        </header>
-       </div>
-     );
-   }
-   ```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Components Props
+### Code Splitting
 
-Zobaczmy teraz jak możemy wykorzystać props komponentów.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-8. Będziemy chcieli teraz zdefiniować imię z poziomu `src/index.js`:
+### Analyzing the Bundle Size
 
-   ```jsx
-   root.render(<App subject="Karolina" />);
-   ```
-9. Zanim coś zmienimy, zobaczmy co nas komponent dostaje od komponentu nadrzędnego:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-   ```jsx
-   function App(props) {
-      // dodaj logowanie:
-      console.log(props);
-      return (
-         // return statement
-      );
-   }
-   ```
+### Making a Progressive Web App
 
-   Po zapisaniu, przeładuje się przeglądarka.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-10. Otwórz *Web Developer Tools* -> *Console*, aby zobaczyć jak wygląda obiekt `props`.
+### Advanced Configuration
 
-11. Ostatnim krokiem jest wykorzystanie props w wyświetlanym powitaniu:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-    ```jsx
-    function App(props) {
-      const subject = props.subject;
-      return (
-      // return statement
-      );
-    }
-    ```
+### Deployment
 
-12. Po upewnieniu się, że wszystko działa, umieść aplikację na githubie.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## React App 2
+### `npm run build` fails to minify
 
-W domu, zrób drugą część tutorialu: [aplikacja TODO](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning).
-
-## React + Tailwind + Express
-
-Teraz zobaczymy jak utworzyć aplikację łączącą zarówno frontend i backend.
-
-```mermaid
-flowchart TD
- App(Hello App\nReact) -- Rest --> API(API\nexpressjs)
-```
-
-1. Utwórz repozytorium `pai_4_app` na githubie, będziemy tam umieszczać naszą aplikację:
-
-   ```bash
-
-   # wroc do katalogu domowego
-   cd
-
-   # workspace
-   cd workspace
-
-   # clone!
-   git clone https://... /pai_4_app.git
-   cd pai_4_app
-   ```
-
-2. Zanim przejdziemy dalej, omówmy jak będzie wyglądało nasze repozytorium:
-
-   ```
-   |- client/
-   |   \- ... # react app
-   \- server/
-       \- ... # express app
-   ```
-
-3. Wygenerujmy kod dla react app:
-
-   ```bash
-   npx create-react-app client
-
-   # podążając za wskazówkami
-   ```
-
-   ```bash
-   # sprawdzmy czy wszystko dziala
-   cd client
-   npm start
-   ```
-
-4. Wróćmy do głównego katalogu naszego projektu:
-
-   ```bash
-   cd ..
-   ```
-
-5. Skorzystamy z generatora do utworzenia szkieletu naszej aplikacji:
-
-   ```bash
-   npx express-generator server
-
-   # podążając za wskazówkami
-   npm install
-   ```
-
-6. Zmień funkcję `get` w routerze zdefiniowanym w `routes/index.js` na:
-
-   ```javascript
-   // ... powyżej będą importy
-   router.get('/api', function(req, res, next) {
-     res.setHeader('Content-Type', 'application/json');
-     res.status(200)
-
-     res.json({
-       'name': 'Natalia',
-       'msg': 'hello!'
-     });
-   });
-
-   // poniżej eksport
-   ```
-
-   Możesz również wykasować `views/index.jade`, nie będzie nam potrzebny.
-
-7. Przetestuj czy działa:
-
-   ```bash
-   PORT=3001 npm start
-   ```
-
-   ```bash
-   curl '127.0.0.1:3001/api'
-
-    # wynik
-    {"name": "Natalia"... }
-   ```
-
-8. Teraz naszym zadaniem, będzie zaimplementowanie komunikacji między aplikacją reacta, a serwerem.
-
-9. Aby każdy z requestów z frontendu szedł do naszego backendu:
-
-    ```json
-    // client/package.json
-
-    "proxy": "http://localhost:3001",
-    ```
-
-10. Wystartujmy kod clienta w osobnej zakładce w terminalu:
-
-
-    ```bash
-    cd ../client
-    npm start
-    ```
-
-11. Pobierzmy wiadomość hello world z backendu:
-
-    ```js
-    import React, { useState, useEffect } from 'react';
-    import logo from './logo.svg';
-    import './App.css';
- 
-    function App() {
-      const [data, setData] = useState(null);
- 
-      useEffect(() => {
-        fetch("/api")
-          .then((res) => res.json())
-          .then((data) => setData(data.msg));
-      }, []);
- 
-      return (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>{data}</p>
-          </header>
-        </div>
-      );
-    }
-    export default App;
-    ```
-   <!-- https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/ -->
-
-12. Dodaj [Tailwindcss](https://tailwindcss.com/docs/guides/create-react-app) do klienta.
-
-## Następne kroki
-
-- Javascript -> Typescript: ([express & TS](https://blog.logrocket.com/how-to-set-up-node-typescript-express/));
-- [VITE](https://vitejs.dev).
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
